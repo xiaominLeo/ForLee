@@ -56,9 +56,9 @@ export default {
         // console.log(currentTime)
         let diffTime = currentTime - startTime;
         that.days = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-        that.hours = that.days * 24;
-        that.minutes = that.hours * 60;
-        that.seconds = Math.floor((currentTime - startTime)/1000);
+        that.hours = Math.ceil(diffTime / (1000 * 60 * 60));
+        that.minutes = Math.ceil(diffTime / (1000 * 60));
+        that.seconds = Math.ceil(diffTime / 1000);
         // console.log(that.seconds)
         // console.log(that.days +"Days-"+ that.hours +"Hours-"+ that.minutes +"Minutes-"+ that.seconds +"Seconds");
       },
